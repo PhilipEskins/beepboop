@@ -30,16 +30,12 @@ $(document).ready(function(){
     var nameUpper = name.charAt(0).toUpperCase() + name.slice(1);
     var number = parseInt($("#number").val());
     var numArr = beepboop(number, nameUpper);
-    console.log(numArr);
+    var itemList = [];
     for (var k = 0; k < numArr.length; k++) {
-      function makeList() {
-        var item = $(".result").text(numArr[k]);
-        var itemList = [];
-        itemList.push(item);
-        return itemList;
-      }
-      $(".result").text(itemList);
+      var displayList = "<li>" + numArr[k] + "</li>";
+      $(".result").append($.parseHTML(displayList));
     }
+    // $(".result").text(testItem);
     // $(".result").text(beepboop(number, nameUpper));
   });
 });

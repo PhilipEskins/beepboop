@@ -1,4 +1,4 @@
-function beepboop(inputNum) {
+function beepboop(inputNum, name) {
   numArr = [];
 
   for (var i = 0; i < inputNum+1; i++) {
@@ -7,7 +7,11 @@ function beepboop(inputNum) {
     var checkTwo = string.indexOf("2");
     var checkThree = string.indexOf("3");
     if (checkThree > -1) {
-      numArr.push("I'm sorry, Dave. I'm afraid I can't do that.");
+      if (!!name) {
+        numArr.push("I'm sorry, " + name + ". I'm afraid I can't do that.");
+      } else {
+        numArr.push("I'm sorry, Dave. I'm afraid I can't do that.");
+      }
     } else if (checkTwo > -1) {
       numArr.push("Boop!");
     } else if (checkOne > -1) {
@@ -24,6 +28,10 @@ function beepboop(inputNum) {
 $(document).ready(function(){
   $("form#project3").submit(function(event){
     event.preventDefault();
-    $(".result").text(beepboop(parseInt($("input").val())));
+    var name = $("#name").val();
+    var number = parseInt($("#number").val());
+    console.log(name);
+    console.log(beepboop(number, name));
+    $(".result").text(beepboop(number, name));
   });
 });

@@ -60,8 +60,16 @@ $(document).ready(function(){
     if (order === "small") {
       var numArrSmall = beepboop(number, nameUpper);
       for (var k = 0; k < numArrSmall.length; k++) {
-        var displayList = "<li>" + numArrSmall[k] + "</li>";
-        $(".result").append($.parseHTML(displayList));
+        var convert = numArrSmall[k];
+        var stringCheck = convert.toString();
+        var halCheck = stringCheck.indexOf("sorry");
+        if (halCheck > -1) {
+          var displayList = '<li><a href ="https://en.wikipedia.org/wiki/HAL_9000" target="_blank">' + numArrSmall[k] + "</a></li>"
+          $(".result").append($.parseHTML(displayList));
+        } else {
+          var displayList = "<li>" + numArrSmall[k] + "</li>";
+          $(".result").append($.parseHTML(displayList));
+        }
       }
     }
     if (order === "large") {

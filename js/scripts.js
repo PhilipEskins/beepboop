@@ -1,5 +1,6 @@
 function beepboop(inputNum, name) {
-  numArr = [];
+  var numArr = [];
+  var output = "";
 
   for (var i = 0; i < inputNum+1; i++) {
     var string = i.toString();
@@ -18,20 +19,27 @@ function beepboop(inputNum, name) {
       numArr.push("Beep!");
     } else {
     numArr.push(i); }
-  // for (var j=0; j<numArr.length+1; j++) {
-  //    numArr[j].toString().indexOf('1') > -1;
-  //    numArr[j].push("Beep!");
   }
-  return numArr;
+  return output = numArr;
 }
 
 $(document).ready(function(){
   $("form#project3").submit(function(event){
     event.preventDefault();
-    var name = $("#name").val();
+    var name = $("#name").val()
+    var nameUpper = name.charAt(0).toUpperCase() + name.slice(1);
     var number = parseInt($("#number").val());
-    console.log(name);
-    console.log(beepboop(number, name));
-    $(".result").text(beepboop(number, name));
+    var numArr = beepboop(number, nameUpper);
+    console.log(numArr);
+    for (var k = 0; k < numArr.length; k++) {
+      function makeList() {
+        var item = $(".result").text(numArr[k]);
+        var itemList = [];
+        itemList.push(item);
+        return itemList;
+      }
+      $(".result").text(itemList);
+    }
+    // $(".result").text(beepboop(number, nameUpper));
   });
 });

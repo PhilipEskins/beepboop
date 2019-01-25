@@ -3,8 +3,14 @@ function beepboop(inputNum) {
 
   for (var i = 0; i < inputNum+1; i++) {
     var string = i.toString();
-    var check = string.indexOf("1");
-    if (check > -1) {
+    var checkOne = string.indexOf("1");
+    var checkTwo = string.indexOf("2");
+    var checkThree = string.indexOf("3");
+    if (checkThree > -1) {
+      numArr.push("I'm sorry, Dave. I'm afraid I can't do that.");
+    } else if (checkTwo > -1) {
+      numArr.push("Boop!");
+    } else if (checkOne > -1) {
       numArr.push("Beep!");
     } else {
     numArr.push(i); }

@@ -1,3 +1,9 @@
+var score = 0;
+
+function bgselector() {
+  score ++;
+}
+
 function beepboop(inputNum, name) {
   var numArr = [];
   var output = "";
@@ -51,6 +57,8 @@ function boopbeep(inputNum, name) {
 $(document).ready(function(){
   $("form#project3").submit(function(event){
     event.preventDefault();
+    bgselector();
+    var submit = 0;
     var name = $("#name").val()
     var nameUpper = name.charAt(0).toUpperCase() + name.slice(1);
     var number = parseInt($("#number").val());
@@ -75,11 +83,18 @@ $(document).ready(function(){
     if (order === "large") {
       var numArrLarge = boopbeep(number, nameUpper);
       for (var l = 0; l < numArrLarge.length; l++) {
-        var displayList = "<li>" + numArrLarge[l] + "</li>";
-        $(".result").append($.parseHTML(displayList));
+        var convert = numArrLarge[l];
+        var stringCheck = convert.toString();
+        var halCheck = stringCheck.indexOf("sorry");
+        if (halCheck > -1) {
+          var displayList = '<li><a href ="https://en.wikipedia.org/wiki/HAL_9000" target="_blank">' + numArrLarge[l] + "</a></li>"
+          $(".result").append($.parseHTML(displayList));
+        } else {
+          var displayList = "<li>" + numArrLarge[l] + "</li>";
+          $(".result").append($.parseHTML(displayList));
+        }
       }
     }
-    // $(".result").text(testItem);
-    // $(".result").text(beepboop(number, nameUpper));
+    console.log(score);
   });
 });

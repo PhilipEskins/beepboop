@@ -31,10 +31,10 @@ $(document).ready(function(){
     var number = parseInt($("#number").val());
     var numArr = beepboop(number, nameUpper);
     var itemList = [];
-    document.getElementByID("result") = "";
+    $(".result").html("");
     for (var k = 0; k < numArr.length; k++) {
       var displayList = "<li>" + numArr[k] + "</li>";
-      $("#result").append($.parseHTML(displayList));
+      $(".result").append($.parseHTML(displayList));
     }
     // $(".result").text(testItem);
     // $(".result").text(beepboop(number, nameUpper));

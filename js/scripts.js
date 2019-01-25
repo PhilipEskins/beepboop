@@ -1,5 +1,11 @@
 function beepboop(inputNum) {
-  return inputNum;
+  numArr = [];
+
+  for (var i = 0; i < inputNum+1; i++) {
+    // var numAdd = inputNum + 1;
+    numArr.push(i);
+  }
+  return numArr;
 }
 
 $(document).ready(function(){

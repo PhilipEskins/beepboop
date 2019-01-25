@@ -9,14 +9,14 @@ function beepboop(inputNum, name) {
     var checkThree = string.indexOf("3");
     if (checkThree > -1) {
       if (!!name) {
-        numArr.push("I'm sorry, " + name + ". I'm afraid I can't do that.");
+        numArr.push(i + " = I'm sorry, " + name + ". I'm afraid I can't do that.");
       } else {
-        numArr.push("I'm sorry, Dave. I'm afraid I can't do that.");
+        numArr.push(i + " = I'm sorry, Dave. I'm afraid I can't do that.");
       }
     } else if (checkTwo > -1) {
-      numArr.push("Boop!");
+      numArr.push(i + " = Boop!");
     } else if (checkOne > -1) {
-      numArr.push("Beep!");
+      numArr.push(i + " = Beep!");
     } else {
     numArr.push(i); }
   }

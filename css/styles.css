@@ -1,6 +1,7 @@
 li {
   list-style-type: none;
   padding: 5px;
+  border: 1px solid black;
 }
 
 li:nth-child(even) {
@@ -9,4 +10,8 @@ li:nth-child(even) {
 
 button {
   margin: 10px 0px;
+}
+
+input[type=radio] {
+  margin-top: 10px;
 }

@@ -34,6 +34,51 @@ p {
   margin-top: 5px;
 }
 
+.earthy {
+  background-color: #8d8741;
+  color: #fbeec1;
+}
+
+.earthy li {
+  background-color: #bc986a;
+  color: #fbeec1;
+}
+
+.earthy li:nth-child(even) {
+  background-color: #659dbd;
+  color: #daad86;
+}
+
+.striking {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+}
+
+.striking li {
+  background-color: #1f2833;
+  color: #66fcf1;
+}
+
+.striking li:nth-child(even) {
+  background-color: #45a29e;
+  color: #c5c6c7;
+}
+
+.creative {
+  background-color: #efe2ba;
+  color: #4056a1;
+}
+
+.creative li {
+  background-color: #f13c20;
+  color: #c5cbe3;
+}
+
+.creative li:nth-child(even) {
+  background-color: #d79922;
+  color: #4056a1;
+}
+
 @media only screen and (max-width: 995px) {
   #machine {
     display: none;

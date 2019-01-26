@@ -1,8 +1,8 @@
-var score = 0;
-
-function bgselector() {
-  score ++;
-}
+// var score = 0;
+//
+// function bgselector() {
+//   score ++;
+// }
 
 function beepboop(inputNum, name) {
   var numArr = [];
@@ -57,7 +57,7 @@ function boopbeep(inputNum, name) {
 $(document).ready(function(){
   $("form#project3").submit(function(event){
     event.preventDefault();
-    bgselector();
+    // bgselector();
     var submit = 0;
     var name = $("#name").val()
     var nameUpper = name.charAt(0).toUpperCase() + name.slice(1);
@@ -95,6 +95,19 @@ $(document).ready(function(){
         }
       }
     }
-    console.log(score);
+    var random = Math.floor(Math.random() * 4)
+    if (random === 0) {
+      $("body").removeClass();
+      $("body").addClass("creative");
+    } else if (random === 1) {
+      $("body").removeClass();
+      $("body").addClass("striking");
+    } else if (random === 2) {
+      $("body").removeClass();
+      $("body").addClass("earthy");
+    } else if (random === 3) {
+      $("body").removeClass();
+    }
+    console.log(random);
   });
 });

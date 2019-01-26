@@ -6,7 +6,7 @@
 
 ## Description
 
-_This website accepts a number from the user, optional name (default is Dave), and which order they'd like the display sorted in. This website does contain a small easter egg._
+_This website accepts a number from the user, optional name (default is Dave), and which order they'd like the display sorted in. The background changes at random. This website does contain a small easter egg._
 _Link to viewable webpage https://philipeskins.github.io/beepboop/_
 
 ## Setup/Installation Requirements
